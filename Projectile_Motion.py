@@ -52,7 +52,7 @@ PlotMotion(x,y,30)
 PlotMotion(x,y,45)
 PlotMotion(x,y,70)
 
-plt.show()
+plt.show()  # Show plot
 
 # Calculate maximum horizontal distance travelled and determines initial angle
 x_max = 0
@@ -64,6 +64,7 @@ for i in range(90):
     if list_x[-1] > x_max:
         theta_max = theta
         x_max = list_x[-1]
+
 
 print "With a velocity of 100 m/s, the furthest distance the projectile can travel, and the angle it corresponds to is:"
 print "x_max = ", x_max
