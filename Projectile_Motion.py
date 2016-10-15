@@ -32,7 +32,7 @@ def PlotMotion(list_x, list_y, theta):
         t = t + dt
 
     # Print time taken for projectile to hit the ground in each case
-    print t
+    # print t
 
     plt.plot(x, y)  # Plot data points in the x and y arrays/lists
     '''
@@ -44,6 +44,7 @@ def PlotMotion(list_x, list_y, theta):
 
     plt.axis([0, 1100, 0, 500])
 
+
 x = []
 y = []
 #  Plot motion of the projectile for 3 different angles
@@ -52,3 +53,20 @@ PlotMotion(x,y,45)
 PlotMotion(x,y,70)
 
 plt.show()
+
+# Calculate maximum horizontal distance travelled and determines initial angle
+x_max = 0
+for i in range(90):
+    list_x = []
+    list_y = []
+    theta = i
+    PlotMotion(list_x, list_y, theta)
+    if list_x[-1] > x_max:
+        theta_max = theta
+        x_max = list_x[-1]
+
+print "With a velocity of 100 m/s, the furthest distance the projectile can travel, and the angle it corresponds to is:"
+print "x_max = ", x_max
+print "theta_max = ", theta_max
+
+
